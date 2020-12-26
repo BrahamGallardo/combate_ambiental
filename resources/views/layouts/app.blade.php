@@ -15,16 +15,23 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/starter-template.css') }}" rel="stylesheet">
+
+    
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
     @yield('css')
 </head>
 
 <body>
     <div id="app">
 
-        <nav id="topNav" class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-            <a class="navbar-brand" href="#">
+        <nav id="topNav" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
+            <a class="navbar-brand" href="/home">
                 <img class="lazy logo-ico" width="36" height="35" src="vendor/devdojo/chatter/assets/images/1.png">
                 <span>Combate Ambiental</span>
             </a>
@@ -34,9 +41,9 @@
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a></li>
-
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Desarrollo Sostenible</a>
+                    <li class="nav-item js-scroll-trigger"><a class="nav-link " href="/home">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/home#portfolio">Medio Ambiente</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ODS</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
                             <ul style="margin-left: -40px">
                                 <h6 class="dropdown-header text-primary">1-6</h6>
@@ -64,7 +71,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">Medio Ambiente</a></li>
+
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Residuos Solidos</a>
@@ -76,7 +83,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#">Eco-Retos ODS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/foro">Foro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/foro/">Foro</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://climateclock.world/">Reloj Climatico</a></li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -112,17 +119,23 @@
                     @endguest
                 </ul>
             </div>
-
         </nav>
-
-
-
-        <main class="py-4">
+        <main style="margin-top: -20px">
             @yield('content')
         </main>
     </div>
 </body>
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/scripts.js') }}"></script>
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
 @yield('js')
 
 </html>
