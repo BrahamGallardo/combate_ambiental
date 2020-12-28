@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace combateAmbiental\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
