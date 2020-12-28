@@ -8,7 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Combate Ambiental') }}</title>
+    
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -23,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     @yield('css')
 </head>
 
@@ -32,7 +33,7 @@
 
         <nav id="topNav" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" >
             <a class="navbar-brand" href="/home">
-                <img class="lazy logo-ico" width="36" height="35" src="vendor/devdojo/chatter/assets/images/1.png">
+                <img class="lazy logo-ico" width="36" height="35" src="/assets/img/1.png">
                 <span>Combate Ambiental</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,7 +84,7 @@
                         </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#">Eco-Retos ODS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/foro/">Foro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/foro">Foro</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://climateclock.world/">Reloj Climatico</a></li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
@@ -125,6 +126,7 @@
         </main>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="{{ asset('js/scripts.js') }}"></script>
 <!-- Bootstrap core JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -134,7 +136,7 @@
         <!-- Contact form JS-->
         
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 @yield('js')
 
