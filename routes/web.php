@@ -15,15 +15,13 @@ Route::get('/', function () {
     return view('home');
 });
 
-Auth::routes(['verify' => true]);
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('profile', function () {
-    // Only verified users may enter...
-})->middleware('verified');
+
 
 Route::get('/verify', function () {
     return view('auth/verify');
